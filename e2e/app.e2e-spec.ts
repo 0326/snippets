@@ -1,14 +1,14 @@
-import { SnippetsPage } from './app.po';
+import { SnippetsPage } from './app.po'
 
 describe('snippets App', () => {
-  let page: SnippetsPage;
+  let page: SnippetsPage
 
   beforeEach(() => {
-    page = new SnippetsPage();
-  });
+    page = new SnippetsPage()
+  })
 
   it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
-  });
-});
+    page.navigateTo()
+    expect(page.getParagraphText()).toEqual('Welcome to app!')
+  })
+})
