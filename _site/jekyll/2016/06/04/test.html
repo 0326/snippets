@@ -59,31 +59,41 @@
       <script type="text/javascript">window.baseurl = 'http://localhost:4000';</script>
       
         <!-- Custom Fonts -->
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> -->
 
         <!-- FontAwesome icons -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/74dfc6cf47.css">
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
         <!-- Core BootStrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <!-- Material Design CSS -->
-        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
+        <link rel="stylesheet" href="/snippets/static/css/bootstrap-material-design.min.css">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/static/css/syntax.css">
+        <link rel="stylesheet" href="/snippets/static/css/syntax.css">
 
         <!-- Custom CSS -->        
-        <link rel="stylesheet" href="/static/css/thickbox.css">
-        <link rel="stylesheet" href="/static/css/main.css">
-        <link rel="stylesheet" href="/static/css/projects.css">
+        <link rel="stylesheet" href="/snippets/static/css/thickbox.css">
+        <link rel="stylesheet" href="/snippets/static/css/main.css">
+        <link rel="stylesheet" href="/snippets/static/css/projects.css">
 
         <script type="text/javascript">
           //loadingImage is relative to project dir
-          var tb_pathToImage = "/static/img/loadingAnimation.gif";
+          var tb_pathToImage = "/snippets/static/img/loadingAnimation.gif";
         </script>
 
-  </head>
+      <script>
+  // 此处请换成自己百度统计的代码
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?a08a671e9850c8f51bb3a2bca9bda576";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
+  </head>
   <body class="home overflow-hidden">
     <div class="header-panel shadow-z-2">
       <div class="container">
@@ -133,7 +143,7 @@
                 <span class="categories">
                   &raquo; 
                   
-                    <a href="/category/jekyll">jekyll</a>
+                    <a href="/snippets/category/jekyll">jekyll</a>
                     
                   
                 </span>
@@ -159,7 +169,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item test.html"><a href="/" target="_self"><i class="fa fa-home"></i> Home</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item test.html"><a href="/snippets/" target="_self"><i class="fa fa-home"></i> Home</a></li>
 
 	
 	
@@ -169,7 +179,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/about/" target="_self"><i class="fa fa-comments"></i> About</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/snippets/about/" target="_self"><i class="fa fa-comments"></i> About</a></li>
 
 	
 	
@@ -179,7 +189,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/projects" target="_self"><i class="fa fa-desktop"></i> Projects</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/snippets/projects" target="_self"><i class="fa fa-desktop"></i> Projects</a></li>
 
 	
 	
@@ -189,7 +199,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/#" target="_self"><i class="fa fa-graduation-cap"></i> Resume</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/snippets/#" target="_self"><i class="fa fa-graduation-cap"></i> Resume</a></li>
 
 	
 	
@@ -199,7 +209,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/#" target="_self"><i class="fa fa-github"></i> Github</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/snippets/#" target="_self"><i class="fa fa-github"></i> Github</a></li>
 
 	
 	
@@ -209,7 +219,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/feed.xml" target="_blank"><i class="fa fa-feed"></i> XML Feed</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  test.html"><a href="/snippets/feed.xml" target="_blank"><i class="fa fa-feed"></i> XML Feed</a></li>
 
 </ul>
 
@@ -342,7 +352,7 @@
               <footer>
   © 2017 动感小前端 - Powered by Jekyll.
 </footer>
-<div align="center">
+<!-- <div align="center">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
     style="display:block"
@@ -350,7 +360,7 @@
     data-ad-slot="0000000000"
     data-ad-format="auto"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+</div> -->
 
             </div>
           </div>
@@ -359,26 +369,16 @@
     </div>
 
     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<script src="/static/js/super-search.js"></script>
+<script src="/snippets/static/js/super-search.js"></script>
 
-<script src="/static/js/thickbox-compressed.js"></script>
-<script src="/static/js/material.min.js"></script>
-<script src="/static/js/main.js"></script>
-<script src="/static/js/projects.js"></script>
+<script src="/snippets/static/js/thickbox-compressed.js"></script>
+<script src="/snippets/static/js/material.min.js"></script>
+<script src="/snippets/static/js/main.js"></script>
+<script src="/snippets/static/js/projects.js"></script>
 
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-
-</script>
   </body>
 </html>
