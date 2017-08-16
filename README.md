@@ -15,3 +15,4 @@ How to use jekyll: [quickstart](http://jekyll.com.cn/docs/quickstart/).
 * Highlight pre
 * Next & Previous Post
 * Disqus comment
+* Baidu Analytics

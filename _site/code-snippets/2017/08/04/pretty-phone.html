@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/static/img/favicon.ico" />
+        <title>手机号码格式美化 - frontend snippets</title>
+        <meta name="author" content="动感小前端" />
+        <meta name="description" content="手机号码格式美化" />
+        <meta name="keywords" content="手机号码格式美化, frontend snippets, code-snippets" />
+
+        <meta content="" property="fb:app_id">
+        <meta content="frontend snippets" property="og:site_name">
+        
+          <meta content="手机号码格式美化" property="og:title">
+        
+        
+          <meta content="article" property="og:type">
+        
+        
+          <meta content="前端日常技术片段" property="og:description">
+        
+        
+          <meta content="http://localhost:4000/code-snippets/2017/08/04/pretty-phone.html" property="og:url">
+        
+        
+          <meta content="2017-08-04T21:50:39+08:00" property="article:published_time">
+          <meta content="http://localhost:4000/about/" property="article:author">
+        
+        
+          <meta content="http://localhost:4000/static/img/logo-high-resolution.png" property="og:image">
+        
+        
+          
+          <meta content="code-snippets" property="article:section">
+          
+        
+        
+          
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@">
+        <meta name="twitter:creator" content="@">
+        
+          <meta name="twitter:title" content="手机号码格式美化">
+        
+        
+          <meta name="twitter:url" content="http://localhost:4000/code-snippets/2017/08/04/pretty-phone.html">
+        
+        
+          <meta name="twitter:description" content="前端日常技术片段">
+        
+        
+
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+      <script type="text/javascript">window.baseurl = 'http://localhost:4000';</script>
+      
+        <!-- Custom Fonts -->
+        <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> -->
+
+        <!-- FontAwesome icons -->
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+        <!-- Core BootStrap CSS -->
+        <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Material Design CSS -->
+        <link rel="stylesheet" href="/snippets/static/css/bootstrap-material-design.min.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/snippets/static/css/syntax.css">
+
+        <!-- Custom CSS -->        
+        <link rel="stylesheet" href="/snippets/static/css/thickbox.css">
+        <link rel="stylesheet" href="/snippets/static/css/main.css">
+        <link rel="stylesheet" href="/snippets/static/css/projects.css">
+
+        <script type="text/javascript">
+          //loadingImage is relative to project dir
+          var tb_pathToImage = "/snippets/static/img/loadingAnimation.gif";
+        </script>
+
+      <script>
+  // 此处请换成自己百度统计的代码
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?a08a671e9850c8f51bb3a2bca9bda576";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+  </head>
+  <body class="home overflow-hidden">
+    <div class="header-panel shadow-z-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="row-picture">
+              <img id="about" class="logo-img" src="//avatars0.githubusercontent.com/u/8676306?v=4&s=460" height="75px" width="75px">
+            </div>
+            <div class="row-details">
+              <h4 class="list-group-item-heading">动感小前端</h4>
+              <p class="list-group-item-text">动次打次</p>
+              <div class="social-icons">
+	
+        <a class="icon" target="_blank" href=""><i class="fa fa-facebook"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-stack-exchange"></i></a>
+    
+</div>
+
+            </div>
+            <div class="navbar-header pull-right">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-2x fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <h2 class="blog-title-pro col-md-6 col-sm-12 col-xs-12 ">手机号码格式美化</h2>
+            
+            <div class="col-md-6 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+              <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+              <ul class="search__results" id="js-search__results"></ul>
+            </div>
+            
+            </div>
+            <p class="info">
+              
+                <span class="time">04 Aug 2017</span>
+              
+              
+                <span class="categories">
+                  &raquo; 
+                  
+                    <a href="/snippets/category/code-snippets">code-snippets</a>
+                    
+                  
+                </span>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container main outer">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+              <nav class="menu">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="list-separator nav navbar-nav well well-primary post">
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item pretty-phone.html"><a href="/snippets/" target="_self"><i class="fa fa-home"></i> Home</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  pretty-phone.html"><a href="/snippets/about/" target="_self"><i class="fa fa-comments"></i> About</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  pretty-phone.html"><a href="/snippets/projects" target="_self"><i class="fa fa-desktop"></i> Projects</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  pretty-phone.html"><a href="/snippets/#" target="_self"><i class="fa fa-graduation-cap"></i> Resume</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  pretty-phone.html"><a href="/snippets/#" target="_self"><i class="fa fa-github"></i> Github</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  pretty-phone.html"><a href="/snippets/feed.xml" target="_blank"><i class="fa fa-feed"></i> XML Feed</a></li>
+
+</ul>
+
+    </div>
+    </nav>
+
+        </div>
+        <div class="col-md-9 col-xs-12 full">
+          <div class="post-content well">
+<article class="content">
+    <div class="post"><blockquote>
+  <p>手机号码字符串格式化：18888888888 =&gt; 188 8888 8888</p>
+</blockquote>
+
+<!--more-->
+
+<p>编写一个手机号码字符串处理函数，实现以下效果：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">formatPhoneNumber</span><span class="p">(</span><span class="s1">'18658128888'</span><span class="p">)</span> <span class="c1">// 186 5812 8888</span>
+<span class="nx">formatPhoneNumber</span><span class="p">(</span><span class="s1">'18658128888'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">)</span> <span class="c1">// 186-5812-8888</span>
+<span class="nx">formatPhoneNumber</span><span class="p">(</span><span class="s1">'186 5812 8888'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">)</span> <span class="c1">// 186-5812-8888</span>
+<span class="nx">formatPhoneNumber</span><span class="p">(</span><span class="s1">'18658128888'</span><span class="p">,</span> <span class="s1">'__'</span><span class="p">)</span> <span class="c1">// 186__5812__8888</span>
+</code></pre>
+</div>
+
+<p>参考代码：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+ * 手机号码格式化
+ * @param {string} numStr 手机号码
+ * @param {string} deli 分割符，默认一个空格
+ */</span>
+<span class="kd">function</span> <span class="nx">formatPhoneNumber</span> <span class="p">(</span><span class="nx">numStr</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nx">deli</span> <span class="o">=</span> <span class="s1">' '</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">numStr</span> <span class="o">=</span> <span class="nx">numStr</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\s</span><span class="sr">/g</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+  <span class="k">return</span> <span class="sr">/^</span><span class="se">\d{11}</span><span class="sr">$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">numStr</span><span class="p">)</span> <span class="p">?</span> <span class="nx">numStr</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(\d{3})(\d{4})</span><span class="sr">/g</span><span class="p">,</span> <span class="err">`</span><span class="nx">$1$</span><span class="p">{</span><span class="nx">deli</span><span class="p">}</span><span class="nx">$2$</span><span class="p">{</span><span class="nx">deli</span><span class="p">}</span><span class="err">`</span><span class="p">)</span> <span class="p">:</span> <span class="nx">numStr</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="拓展">拓展</h2>
+<p>有时候需要处理的号码并不是11位手机号，实现一个通用的字符串处理方法，达到以下效果：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">formatStr</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">)</span> <span class="c1">// 返回原字符串 123456789</span>
+<span class="nx">formatStr</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">)</span> <span class="c1">// 返回原字符串 123456789</span>
+<span class="nx">formatStr</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// 返回前3个字符 123</span>
+<span class="nx">formatStr</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1">// 返回 123-4567</span>
+<span class="nx">formatStr</span><span class="p">(</span><span class="s1">'12345678901234'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1">// 返回 123 4567 8901</span>
+<span class="nx">formatStr</span><span class="p">(</span><span class="s1">'12345678901234'</span><span class="p">,</span> <span class="s1">'-'</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">// 返回 123-4567-8901-234</span>
+</code></pre>
+</div>
+
+<p>参考代码：</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+ * 往字符串多个指定位置插入指定分割符并进行截取
+ * 利用字符串 replace 方法，eg: formatStr('123456789', '-', 3, 4) =&gt; replace(/(.{3})(.{4})/g, '$1-$2-')
+ * @param {string} str 需要格式化的原始字符串
+ * @param {string} deli 需要插入的字符
+ * @param {array} pos 需要插入的位置数组
+ */</span>
+<span class="kd">function</span> <span class="nx">formatStr</span> <span class="p">(</span><span class="nx">str</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nx">deli</span> <span class="o">=</span> <span class="s1">' '</span><span class="p">,</span> <span class="p">...</span><span class="nx">pos</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">sumPos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">regStr</span> <span class="o">=</span> <span class="s1">''</span>
+  <span class="kr">const</span> <span class="nx">strLen</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span>
+  <span class="kr">const</span> <span class="nx">replaceStr</span> <span class="o">=</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">sumPos</span> <span class="o">+=</span> <span class="nx">p</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">strLen</span> <span class="o">&gt;=</span> <span class="nx">sumPos</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">regStr</span> <span class="o">+=</span> <span class="err">`</span><span class="p">(.{</span><span class="nx">$</span><span class="p">{</span><span class="nx">p</span><span class="p">}})</span><span class="err">`</span>
+      <span class="k">return</span> <span class="err">`</span><span class="nx">$$</span><span class="p">{</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">}</span><span class="nx">$</span><span class="p">{</span><span class="nx">deli</span><span class="p">}</span><span class="err">`</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">sumPos</span> <span class="o">-=</span> <span class="nx">p</span>
+      <span class="nx">regStr</span> <span class="o">+=</span> <span class="err">`</span><span class="p">(.{</span><span class="nx">$</span><span class="p">{</span><span class="nx">strLen</span> <span class="o">-</span> <span class="nx">sumPos</span><span class="p">}})</span><span class="err">`</span>
+      <span class="k">return</span> <span class="s1">''</span>
+    <span class="p">}</span>
+  <span class="p">}).</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+
+  <span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">sumPos</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">regStr</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">),</span> <span class="nx">replaceStr</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">-</span> <span class="nx">deli</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>另外一个方法，将原字符串str.split(‘‘)为数组，然后循环在指定位置插入 deli 分隔符。</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">formatStr2</span><span class="p">(</span><span class="nx">originStr</span> <span class="o">=</span> <span class="s1">''</span><span class="p">,</span> <span class="nx">splitStr</span> <span class="o">=</span> <span class="s1">' '</span><span class="p">,</span> <span class="p">...</span><span class="nx">splits</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">strArr</span> <span class="o">=</span> <span class="nx">originStr</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="kd">let</span> <span class="nx">strLen</span> <span class="o">=</span> <span class="nx">originStr</span><span class="p">.</span><span class="nx">length</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">splitLen</span> <span class="o">=</span> <span class="nx">splits</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">splits</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">count</span> <span class="o">+=</span> <span class="nx">splits</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&lt;</span> <span class="nx">strLen</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">strArr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">count</span><span class="o">++</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">splitStr</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">break</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">&lt;=</span> <span class="nx">strLen</span> <span class="p">?</span> <span class="nx">count</span><span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="nx">count</span>
+  <span class="k">return</span> <span class="nx">strArr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">count</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>Chrome 下测试该方法要比正则方法效率高。测试代码：</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">testSpeed</span><span class="p">(</span><span class="nx">times</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">t1</span> <span class="o">=</span> <span class="nx">performance</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span> <span class="nx">i</span> <span class="o">=</span><span class="mi">0</span>
+  <span class="k">while</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">formatStr</span><span class="p">(</span><span class="s1">'12345678901234'</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">performance</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">t1</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+</div>
+    <hr />
+    <div class="share-page">
+    Share this on &rarr;
+ <a href="https://twitter.com/share" class="twitter-share-button" data-via="">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Google + -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- Facebook -->
+<div class="fb-share-button" data-href="http://localhost:4000/code-snippets/2017/08/04/pretty-phone.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</article>
+<hr />
+
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+                
+                <div class="panel-body">
+                <h4>Related Posts</h4>
+                <ul>
+                
+                <li class="relatedPost">
+                    <a href="http://localhost:4000/code-snippets/2017/08/04/deep-copy.html">JS 实现深拷贝</a>
+                    
+                        <small>(Categories: <a href="/category/code-snippets">code-snippets</a>)</small>
+                    
+                </li>
+                
+                
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+
+    </ul>
+    </div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev pull-left" href="http://localhost:4000/code-snippets/2017/08/04/deep-copy.html">&laquo; JS 实现深拷贝</a>
+  
+  
+</div>
+
+
+<div class="disqus-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        var disqus_shortname = "";
+        var disqus_identifier = "http://localhost:4000_手机号码格式美化";
+        var disqus_title = "手机号码格式美化";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    /* ]]> */
+    </script>
+</div>
+</div>
+          <div class="row">
+            <div class="col-md-12 col-xs-12 footer">
+              <footer>
+  © 2017 动感小前端 - Powered by Jekyll.
+</footer>
+<!-- <div align="center">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-0000000000000000"
+    data-ad-slot="0000000000"
+    data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div> -->
+
+            </div>
+          </div>
+        </div> <!-- end /.col-md-9 -->
+      </div> <!-- end /.row -->
+    </div>
+
+    
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="/snippets/static/js/super-search.js"></script>
+
+<script src="/snippets/static/js/thickbox-compressed.js"></script>
+<script src="/snippets/static/js/material.min.js"></script>
+<script src="/snippets/static/js/main.js"></script>
+<script src="/snippets/static/js/projects.js"></script>
+
+  </body>
+</html>
