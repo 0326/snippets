@@ -1,0 +1,28 @@
+title: frontend snippets
+description: 前端日常技术片段
+author: 动感小前端
+logo: //avatars0.githubusercontent.com/u/8676306?v=4&s=460
+github: https://github.com/0326
+about: 动次打次
+
+baseurl: ""
+url: ""
+
+allowsearch: true
+
+# disqus_shortname: aboutashu
+# google_analytics: UA-72862926-1
+
+# share:
+  # twitter_username: \#
+  # fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
+markdown: kramdown
+gems: [jekyll-paginate, jekyll-gist]
